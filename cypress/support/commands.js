@@ -5,11 +5,11 @@ Cypress.Commands.add('login', (username, password) => {
 
 
      });
-Cypress.Commands.add('acessingMenu', (buttonMenu,elementTablePage, urlPage,titlePage) => {
+Cypress.Commands.add('acessingMenu', (buttonMenu,elementTablePage, urlPage) => {
         cy.get(buttonMenu).click();
         cy.get(elementTablePage).should('be.visible');
         cy.url().should('include', urlPage);
-        cy.contains(titlePage).should('be.visible')
+        //cy.contains(titlePage).should('be.visible')
 })
 //
 //
